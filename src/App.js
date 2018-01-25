@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+//themoviedb API 72049b7019c79f226fad8eec6e1ee889
+//example api search https://api.themoviedb.org/3/movie/550?api_key=72049b7019c79f226fad8eec6e1ee889
+
+
 
 class App extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      movies: '',
+      movieName: ''
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="root">
+        <Header />
+        <Footer />
       </div>
     );
   }
