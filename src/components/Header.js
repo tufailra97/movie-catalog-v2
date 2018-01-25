@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
 export default class Header extends Component {
+
+  //render HEADER
   render(){
     return(
+      //HEADER
       <header id="header">
         <nav className="uk-navbar-container uk-navbar-transparent" uk-navbar="true">
           <div className="uk-navbar-left">
