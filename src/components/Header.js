@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 export default class Header extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      movies: [],
+      movieQuery: ''
+    }
+  }
+
   //render HEADER
   render(){
     return(
