@@ -20,7 +20,7 @@ export default class Header extends Component {
             <ul id="logo" className="uk-navbar-nav">
               <li>
                 <a>
-                  <img src="asset/img/logo.svg" />
+                  <img src="asset/img/logo.svg" alt="Movie"/>
                   <span className="uk-text-large">Movie</span>
                 </a>
               </li>
@@ -45,9 +45,9 @@ export default class Header extends Component {
             <div className="uk-navbar-item">
               <form className="uk-search uk-search-navbar" onSubmit={this.submitSearch}>
                 <div uk-form-custom="target: true">
-                  <input class="uk-input uk-form-width-medium" type="text" placeholder="Movie Name..." />
+                  <input className="uk-input uk-form-width-medium" type="text" placeholder="Movie Name..." />
                 </div>
-                <button class="uk-button uk-button-default">Search</button>
+                <button className="uk-button uk-button-default">Search</button>
               </form>
             </div>
           </div>
