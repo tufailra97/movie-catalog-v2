@@ -1,45 +1,32 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import MovieList from './components/MovieList';
 import Footer from './components/Footer';
 
-//themoviedb API 72049b7019c79f226fad8eec6e1ee889
-//example api search https://api.themoviedb.org/3/movie/550?api_key=72049b7019c79f226fad8eec6e1ee889
-const MOVIE_API = "https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query=home&api_key=72049b7019c79f226fad8eec6e1ee889";
+const MOVIE_API = "http://api.themoviedb.org/3/discover/movie?api_key=72049b7019c79f226fad8eec6e1ee889&language=en-US&sort_by=release_date.desc&include_adult=true&include_video=false&page=2&primary_release_year=2018";
 
+//class
 class App extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-      movies: '',
+      movies: [],
       movieName: ''
     }
+  }
+  
 
+  componentWillMount(){
     this.fetchMovie();
   }
-  /*
-  var myHeaders = new Headers();
 
-  var myInit = { method: 'GET',
-                 headers: myHeaders,
-                 mode: 'cors',
-                 cache: 'default' };
 
-  var myRequest = new Request('flowers.jpg', myInit);
-
-  fetch(myRequest).then(function(response) {
-    return response.blob();
-  }).then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
-  });
-  */
-
+//fetching movie
   fetchMovie = () =>{
     const req = new Request(MOVIE_API, {
       method: 'GET',
-      chache: 'default',
-      img: ''
+      cache: 'default'
     });
 
     fetch(req).then(response =>{
@@ -47,26 +34,18 @@ class App extends Component {
     }).then(data =>{
       this.setState({
         movies: data.results
-      })
+      });
     }).catch(err => {
-      console.log(err);
+      console.log("ERROR: " + err);
     })
-
-    console.log(req);
   }
 
   render() {
     return (
       <div className="root">
         <Header />
+        <MovieList moviesRes={this.state.movies}/>
         <Footer />
-        {this.movies.map((movie, index)=>{
-          return(
-            <div key={index}>
-              {movie.vote_average}
-            </div>
-          )
-        })}
       </div>
     );
   }
