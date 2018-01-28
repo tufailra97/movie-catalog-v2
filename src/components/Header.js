@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
+import SearchMovie from './SearchMovie';
 
 export default class Header extends Component {
-
   constructor(){
     super();
+    
     this.state = {
-      movies: [],
-      movieQuery: ''
+      movieName: ''
     }
   }
-
+  //handle movie name
+  handleMovieName = (name) =>{
+    let movieName = name;
+    this.props.name(name);
+    //set movie name
+    this.setState({
+      movieName
+    });
+  }
   //render HEADER
   render(){
     return(
@@ -43,12 +51,7 @@ export default class Header extends Component {
 
           <div className="uk-navbar-right">
             <div className="uk-navbar-item">
-              <form className="uk-search uk-search-navbar" onSubmit={this.submitSearch}>
-                <div uk-form-custom="target: true">
-                  <input className="uk-input uk-form-width-medium" type="text" placeholder="Movie Name..." />
-                </div>
-                <button className="uk-button uk-button-default">Search</button>
-              </form>
+              <SearchMovie name={this.handleMovieName}/>
             </div>
           </div>
         </nav>
