@@ -3,7 +3,7 @@ import Header from './components/Header';
 import MovieList from './components/MovieList';
 import Footer from './components/Footer';
 
-const MOVIE_API = "http://api.themoviedb.org/3/discover/movie?api_key=72049b7019c79f226fad8eec6e1ee889&language=en-US&sort_by=release_date.desc&include_adult=true&include_video=false&page=2&primary_release_year=2018";
+const MOVIE_API = "https://api.themoviedb.org/3/discover/movie?api_key=72049b7019c79f226fad8eec6e1ee889&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
 
 //class
 class App extends Component {
@@ -17,11 +17,9 @@ class App extends Component {
   }
   
 
-  componentWillMount(){
+  componentDidMount(){
     this.fetchMovie();
   }
-
-
 //fetching movie
   fetchMovie = () =>{
     const req = new Request(MOVIE_API, {
@@ -44,7 +42,7 @@ class App extends Component {
     return (
       <div className="root">
         <Header />
-        <MovieList moviesRes={this.state.movies}/>
+        <MovieList movies={this.state.movies}/>
         <Footer />
       </div>
     );
