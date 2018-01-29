@@ -1,5 +1,5 @@
 import React from 'react';
-
+import MovieDetails from './MovieDetails';
 //The following component will render the movie result only
 class MovieList extends React.Component {
     render(){
