@@ -9,7 +9,7 @@ class MovieList extends React.Component {
         return(
             <div className=".uk-container uk-margin">
                 <h1 className="uk-heading-divider uk-text-center">Result</h1>
-                <div className="uk-margin-small uk-grid-small  uk-child-width-1-4@s uk-flex-center uk-text-center" uk-grid="true">
+                <div className="uk-margin-small uk-grid-small  uk-child-width-1-5@s uk-flex-center uk-text-center" uk-grid="true">
                     {
                         movies.map((movie, index) => {
                             return (
@@ -17,7 +17,7 @@ class MovieList extends React.Component {
                                     <div className="uk-card uk-card-default uk-text-center uk-card-body">
                                         <p>{movie.title}</p>
                                         <img src={encodeURI(url)+movie.poster_path} alt={movie.title}/>
-                                        <button className="uk-button uk-button-primary uk-margin">More...</button>
+                                        <MovieDetails />
                                     </div>
                                 </div>
                             )

@@ -28,6 +28,7 @@ class App extends Component {
     if( this.state.movies.length === 0 ){
       movieAPI = "https://api.themoviedb.org/3/discover/movie?api_key=72049b7019c79f226fad8eec6e1ee889&sort_by=popularity.desc&page=1";
     }else{
+      //search the movie name
       movieAPI = "https://api.themoviedb.org/3/search/movie?page=1&query=" + name + API;
     }
 
