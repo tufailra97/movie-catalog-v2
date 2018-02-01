@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 export default class Footer extends Component {
   render(){
     return(
-      <footer>
-        <h1>Footer</h1>
+      <footer className="hero is-link">
+        <h1 className="hero-body">footer</h1>
       </footer>
     );
   }

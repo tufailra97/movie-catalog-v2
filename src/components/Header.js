@@ -37,14 +37,6 @@ export default class Header extends Component {
               </a>
             </div>
           </div>
-          <div className="level-item is-centered">
-            <div className="menu">
-              <a href="#">Movie</a>
-            </div>
-            <div className="menu">
-              <a href="#">Series</a>
-            </div>
-          </div>
           <div className="level-right">
 
             <div className="level-item">

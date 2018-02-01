@@ -58,7 +58,7 @@ export default class MovieDetails extends Component {
               <p><span className="subtitle is-5">Overview:</span></p>
               <p>{movie.overview}</p>
               <hr/>
-              <p><span className="subtitle is-5">Vote:</span> <span className="title is-4">{movie.vote_average}</span> </p>
+              <p><span className="subtitle is-5">Vote:</span> <span className="title is-4">{movie.vote_average}/10</span> </p>
             </div>
         </div>
         </Modal>
