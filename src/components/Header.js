@@ -4,7 +4,7 @@ import SearchMovie from './SearchMovie';
 export default class Header extends Component {
   constructor(){
     super();
-    
+
     this.state = {
       movieName: ''
     }
@@ -29,7 +29,6 @@ export default class Header extends Component {
               <figure className="image is-128x128">
                 <img src="asset/img/logo.svg" alt="movie"/>
               </figure>
-              
             </div>
             <div className="level-item">
               <a href="#">
@@ -38,13 +37,16 @@ export default class Header extends Component {
               </a>
             </div>
           </div>
-          <div className="level-right">
-            <div className="level-item">
+          <div className="level-item is-centered">
+            <div className="menu">
               <a href="#">Movie</a>
             </div>
-            <div className="level-item">
+            <div className="menu">
               <a href="#">Series</a>
             </div>
+          </div>
+          <div className="level-right">
+
             <div className="level-item">
               <SearchMovie searchName={this.handleMovieName}/>
             </div>

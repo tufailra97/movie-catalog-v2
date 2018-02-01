@@ -3,28 +3,34 @@ import MovieDetails from './MovieDetails';
 //The following component will render the movie result only
 class MovieList extends React.Component {
     render(){
-        //extract the props 
+        //extract the props
         const movies = this.props.movies;
-        const url = "http://image.tmdb.org/t/p/w500/";
+        const url = "http://image.tmdb.org/t/p/w300/";
         return(
-            <div className=".uk-container uk-margin">
-                <h1 className="uk-heading-divider uk-text-center">Result</h1>
-                <div className="uk-margin-small uk-grid-small  uk-child-width-1-5@s uk-flex-center uk-text-center" uk-grid="true">
-                    {
-                        movies.map((movie, index) => {
-                            return (
-                                <div key={index}>
-                                    <div className="uk-card uk-card-default uk-text-center uk-card-body">
-                                        <p>{movie.title}</p>
-                                        <img src={encodeURI(url)+movie.poster_path} alt={movie.title}/>
-                                        <MovieDetails />
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-        </div>
+            <section className="container is-fluid movie-list">
+              <div className="res">
+                <h1 className="title is-1 has-text-centered">Result</h1>
+              </div>
+              <div className="columns is-multiline is-mobile is-centered">
+                {
+                  movies.map((movie, index) => {
+                    return (
+                      <div key={index}>
+                        <div className="column box has-text-centered">
+                          <div className="hero is-link">
+                            <p>{movie.title}</p>
+                          </div>
+                          <figure>
+                            <img src={encodeURI(url)+movie.poster_path} alt={movie.title}/>
+                          </figure>
+                          <MovieDetails movieDetail={movie}/>
+                        </div>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </section>
         );
     }
 }
