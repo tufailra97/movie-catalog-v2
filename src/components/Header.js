@@ -23,35 +23,30 @@ export default class Header extends Component {
     return(
       //HEADER
       <header id="header">
-        <nav className="uk-navbar-container uk-navbar-transparent" uk-navbar="true">
-          <div className="uk-navbar-left">
-            <ul id="logo" className="uk-navbar-nav">
-              <li>
-                <a>
-                  <img src="asset/img/logo.svg" alt="Movie"/>
-                  <span className="uk-text-large">Movie</span>
-                </a>
-              </li>
-            </ul>
+        <nav className="level">
+          <div className="level-left">
+            <div id="logo" className="level-item">
+              <figure className="image is-128x128">
+                <img src="asset/img/logo.svg" alt="movie"/>
+              </figure>
+              
+            </div>
+            <div className="level-item">
+              <a href="#">
+                <span>Web</span>
+                <span>Movie</span>
+              </a>
+            </div>
           </div>
-
-          <div className="uk-navbar-center">
-            <ul className="uk-navbar-nav">
-              <li>
-                <a href="#">Movies</a>
-              </li>
-              <li>
-                <a href="#">Tv Series</a>
-              </li>
-              <li>
-                <a href="#">Upcoming</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="uk-navbar-right">
-            <div className="uk-navbar-item">
-              <SearchMovie name={this.handleMovieName}/>
+          <div className="level-right">
+            <div className="level-item">
+              <a href="#">Movie</a>
+            </div>
+            <div className="level-item">
+              <a href="#">Series</a>
+            </div>
+            <div className="level-item">
+              <SearchMovie searchName={this.handleMovieName}/>
             </div>
           </div>
         </nav>

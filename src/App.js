@@ -65,7 +65,7 @@ class App extends Component {
   //render the component
   render() {
     return (
-      <div className="root">
+      <div className="main">
         <Header name = {this.handleResult}/>
         <MovieList movies={this.state.movies}/>
         <Footer />

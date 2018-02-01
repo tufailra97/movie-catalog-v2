@@ -14,7 +14,7 @@ export default class SearchMovie extends React.Component{
     submitSearch = (e) =>{
         e.preventDefault();
         //pass to the parent the movie name
-        this.props.name(this.state.movieName);
+        this.props.searchName(this.state.movieName);
 
         //set movieName to an empty string 
         this.setState({
@@ -33,16 +33,19 @@ export default class SearchMovie extends React.Component{
     //render the component
     render(){
         return(
-            <form className="uk-search uk-search-navbar" onSubmit={this.submitSearch}>
-                <div uk-form-custom="target: true">
+            <form className="level field has-addons" onSubmit={this.submitSearch}>
+                <div className="control">
                   <input 
-                    className="uk-input uk-form-width-medium" 
+                    className="input" 
                     onChange={this.handleSearch} 
                     type="text" 
                     placeholder="Movie Name..." 
                     value={this.state.movieName}/>
                 </div>
-                <button className="uk-button uk-button-default">Search</button>
+                
+                <div className="control">
+                    <button className="button is-info">Search</button>
+                </div>
             </form>
         );
     }

@@ -1,34 +1,35 @@
 /*
 Reset browser default settings
 */
-*{
-  margin: 0;
-  padding: 0;
-  font-family: inherit;
-  line-height: inherit;
-}
 /*
 ==================
 Header
 ==================
 */
 #header{
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   background-color: rgb(12, 89, 164);
+}
+
+#header a {
+  color: white;
+  font-size: 1.2rem;
 }
 
 #logo img{
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
-.uk-navbar-nav li a:hover, .uk-button-default:hover{
-  color: orange;
-}
-#header span, .uk-navbar-nav li a, .uk-button-default{
-  color: white;
+#logo div a > span {
+  font-size: 2rem;
 }
 
+
+#logo div a > span:first-child{
+  padding-left: 1rem;
+  padding-right: 0.2rem;
+}
 
 /*
 ==================
