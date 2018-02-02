@@ -11,13 +11,13 @@ Header
   background-color: rgb(12, 89, 164);
 }
 
-#header a {
+#header p {
   color: white;
   text-transform: uppercase;
   font-size: 1.2rem;
 }
 
-#header a:hover{
+#header p:hover{
   color: orange;
 }
 
