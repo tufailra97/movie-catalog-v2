@@ -1,0 +1,67 @@
+/*
+Reset browser default settings
+*/
+/*
+==================
+Header
+==================
+*/
+#header{
+  padding: 0.5rem 1rem;
+  background-color: rgb(12, 89, 164);
+}
+
+#header a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+#header a:hover{
+  color: orange;
+}
+
+#logo img{
+  width: 100%;
+  height: auto;
+}
+
+#logo div a > span {
+  font-size: 2rem;
+}
+
+
+#logo div a > span:first-child{
+  padding-left: 1rem;
+  padding-right: 0.2rem;
+}
+
+.menu:first-child{
+  margin-right: 2rem;
+}
+
+/*
+==================
+Content
+==================
+*/
+
+.movie-list {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.movie-list .res {
+  margin-bottom: 2rem
+}
+
+.img{
+  width: 50%;
+}
+
+.desc{
+  margin-left: 0.5rem;
+}
+.column{
+  margin: 2px;
+}
