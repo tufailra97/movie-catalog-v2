@@ -32,10 +32,10 @@ export default class Header extends Component {
               </figure>
             </div>
             <div className="level-item">
-              <a href="#">
+              <p href="#">
                 <span>Web</span>
                 <span>Movie</span>
-              </a>
+              </p>
             </div>
           </div>
           <div className="level-right">
