@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchMovie from './SearchMovie';
 
+//Header component
 export default class Header extends Component {
   constructor(){
     super();
@@ -38,7 +39,6 @@ export default class Header extends Component {
             </div>
           </div>
           <div className="level-right">
-
             <div className="level-item">
               <SearchMovie searchName={this.handleMovieName}/>
             </div>

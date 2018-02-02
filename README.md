@@ -1,2 +1,2 @@
 # Movie catalog app V2
-Web movie catalog using react with themoviedb API
+This is a simple single page web app developed using react with MovieDB API.

@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 
+//Footer component
 export default class Footer extends Component {
   render(){
     return(
       <footer className="hero is-link">
-        <h1 className="hero-body">footer</h1>
+        <div className="hero-body has-text-centered">
+          <p className="title is-4">Tufail Rahman 	&copy; 2018</p>
+        </div>
       </footer>
     );
   }

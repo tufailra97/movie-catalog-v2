@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieDetails from './MovieDetails';
-//The following component will render the movie result only
+//Movie List component
 class MovieList extends React.Component {
     render(){
         //extract the props

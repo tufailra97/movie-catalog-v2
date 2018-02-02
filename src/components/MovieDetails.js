@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal'
 
-
-
+//Movie Details component
 export default class MovieDetails extends Component {
     constructor(){
       super();
@@ -16,19 +15,17 @@ export default class MovieDetails extends Component {
       Modal.setAppElement('body');
     }
 
-    displayMovieDetails = () =>{
-      console.log(this.props.movieDetail);
-    }
-
+    //on open modal
     openModal = () => {
     this.setState({modalIsOpen: true});
     }
 
-
+    //on close the modal
     closeModal = () => {
       this.setState({modalIsOpen: false});
     }
 
+    //render the component
     render() {
     const url = "http://image.tmdb.org/t/p/w780/";
     const movie = this.props.movieDetail;
@@ -67,6 +64,7 @@ export default class MovieDetails extends Component {
   }
 }
 
+//style for the modal component
 const customStyles = {
   content : {
     maxWidth : '720px',
