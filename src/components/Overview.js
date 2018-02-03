@@ -67,7 +67,7 @@ export default class Overview extends Component {
 //style for the modal component
 const customStyles = {
   content : {
-    width : '40%',
+    minWidth : '40%',
     height: '90%',
     top : '50%',
     left : '50%',
