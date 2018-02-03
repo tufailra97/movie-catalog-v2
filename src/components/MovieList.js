@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieDetails from './MovieDetails';
+import Overview from './Overview';
 //Movie List component
 class MovieList extends React.Component {
     render(){
@@ -9,7 +9,8 @@ class MovieList extends React.Component {
         return(
             <section className="container is-fluid movie-list">
               <div className="res">
-                <h1 className="title is-1 has-text-centered">Result</h1>
+                <h1 className="title is-1 has-text-centered">Movies</h1>
+                <hr/>
               </div>
               <div className="columns is-multiline is-mobile is-centered">
                 {
@@ -23,12 +24,13 @@ class MovieList extends React.Component {
                           <figure>
                             <img src={encodeURI(url)+movie.poster_path} alt={movie.title}/>
                           </figure>
-                          <MovieDetails movieDetail={movie}/>
+                          <Overview overview={movie}/>
                         </div>
                       </div>
                     )
                   })
                 }
+                <hr/>
               </div>
             </section>
         );

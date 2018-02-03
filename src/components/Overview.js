@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Modal from 'react-modal'
 
 //Movie Details component
-export default class MovieDetails extends Component {
+export default class Overview extends Component {
     constructor(){
       super();
 
@@ -27,8 +27,8 @@ export default class MovieDetails extends Component {
 
     //render the component
     render() {
-    const url = "http://image.tmdb.org/t/p/w780/";
-    const movie = this.props.movieDetail;
+    const url = "https://image.tmdb.org/t/p/w780/";
+    const movie = this.props.overview;
     return (
       <div>
         <div className="hero">
@@ -67,8 +67,8 @@ export default class MovieDetails extends Component {
 //style for the modal component
 const customStyles = {
   content : {
-    maxWidth : '720px',
-    maxHeigth: '600px',
+    width : '40%',
+    height: '90%',
     top : '50%',
     left : '50%',
     right : 'auto',

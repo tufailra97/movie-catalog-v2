@@ -14,7 +14,7 @@ class App extends Component {
       name: ''
     }
   }
-  
+
 
   componentDidMount(){
     this.fetchMovie();
@@ -32,7 +32,7 @@ class App extends Component {
       movieAPI = "https://api.themoviedb.org/3/search/movie?page=1&query=" + name + API;
     }
 
-    
+
     const req = new Request(movieAPI, {
       method: 'GET',
       cache: 'default'
@@ -47,21 +47,21 @@ class App extends Component {
           movies: data.results
         });
       }
-      
+
     }).catch(err => {
       console.log("ERROR: " + err);
     })
   }
 
 
-  //handle name 
+  //handle name
   handleResult = (name) =>{
     this.setState({
       name: name
     });
     this.fetchMovie(name);
   }
-  
+
   //render the component
   render() {
     return (
