@@ -24,26 +24,27 @@ export default class Header extends Component {
     return(
       //HEADER
       <header id="header">
-        <nav className="level">
-          <div className="level-left">
-            <div id="logo" className="level-item">
-              <figure className="image is-128x128">
+        <nav className="display-inline">
+          <div id="logo" className="display-inline">
+              <a className="d-inline-block align-top" href="#">
                 <img src="asset/img/logo.svg" alt="movie"/>
-              </figure>
-            </div>
-            <div className="level-item">
-              <p href="#">
-                <span>Web</span>
-                <span>Movie</span>
-              </p>
-            </div>
+              </a>
+              <a href="">
+                <h1 className="title">MovieLots</h1>
+              </a>
           </div>
-          <div className="level-right">
-            <div className="level-item">
-              <SearchMovie searchName={this.handleMovieName}/>
-            </div>
+          <div>
+            <ul className="display-inline">
+              <li><a href="#">Movie</a></li>
+              <li><a href="#">Series</a></li>
+            </ul>
+          </div>
+          <div className="search-bar">
+                <SearchMovie searchName={this.handleMovieName}/>
           </div>
         </nav>
+        
+        <span className="toggle"></span>
       </header>
     );
   }

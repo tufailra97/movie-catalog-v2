@@ -1,5 +1,47 @@
-/* width */
+/*
+  Author: Tufail Rahman
+  Project: Movie Catalog
+  Date: 08 Feb 2018
+  Version: v2.1
 
+*/
+/*============================*/
+/*
+  Font to use : 
+    font-family: 'Nanum Myeongjo', serif; 
+    font-family: "helvetica neue", sans-serif;
+    font-family: 'Bitter', serif;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Arvo', serif;
+*/
+/*============================*/
+
+
+/*
+======================
+  Global classes
+======================
+ */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%
+}
+
+.display-inline{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center
+}
+
+a{
+  text-decoration: none;
+}
 /*
 ==================
 Header
@@ -7,60 +49,244 @@ Header
 */
 #header{
   padding: 0.5rem 1rem;
-  background-color: rgb(12, 89, 164);
+  background-color: rgb(24, 29, 34);
 }
-
-#header p {
+#header .title{
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  font-family: 'Cabin', sans-serif;
   color: white;
+  font-weight: 500;
+}
+  
+#header li{
+  margin-left: 1rem;
+  list-style: none;
   text-transform: uppercase;
+}
+#header li:first-child{
+  margin-left: 0;
+}
+#header li a{  
+  padding: 1rem;
+  font-family: "helvetica neue", sans-serif;
   font-size: 1.2rem;
+  color: white;
+}
+#header li a:hover{
+  border: 1px solid rgb(255, 255, 255);
 }
 
-#header p:hover{
-  color: orange;
+#header .input input[type=text]{
+  padding: 0.8rem;
+  border-radius: 25px;
+  border: none;
 }
 
-#logo img{
+
+/*
+===================
+Content
+===================
+*/
+.result-list{
+  margin: 0 auto;
+  padding: 1rem 0 1rem 0;
   width: 100%;
+  background-color: rgb(238, 238, 238);
+  height: auto;
+}
+.rest h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+}
+.display-list{
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+hr{
+  margin: 0 auto;
+  width: 90%;
+  border: 0.5px solid lightgray;
+}
+.item{
+  max-width: 18%;
+  height: auto;
+  margin: 1rem 0.5rem;
+  overflow: hidden;
+  box-shadow: 5px 2px 5px rgb(24, 23, 23);
+}
+.image{
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease;
+}
+
+.image img:hover{
+  transform: scale(1.3);
+}
+.desc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(24, 29, 34);
+}
+.desc p{
+  margin: 0.2rem 0;
+  width: 90%;
+  font-size: 1rem;
+  font-family: 'Nanum Myeongjo', serif; 
+  text-align: center;
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+  white-space: nowrap;
+  color: white;
+}
+
+
+/*
+  Overview
+*/
+.overview button{
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: rgb(24, 29, 34);
+  border: 1px solid white;
+  border-radius: 25px;
+  transition: all 1s ease;
+}
+.overview button:hover{
+  color: rgb(24, 29, 34);
+  background-color: white;
+}
+
+hr{
+  margin-top: 1rem;
+}
+.border{
+  margin: 5% auto;
+  width: 50%;
+  border: 1px solid lightgoldenrodyellow;
+}
+.close{
+  text-align: right;
+}
+
+.modal{
+  margin: 1rem auto;
+  
+  width: 90%;
   height: auto;
 }
 
-#logo div a > span {
-  font-size: 2rem;
+.fa-times{
+  text-align: right;
+  background-color: rgba(24, 29, 34, 0.63);
+  color: white;
+  border: none;
+  padding: 1rem;
+}
+.fa-times:hover{
+  background-color: rgb(227, 230, 233);
+  color: black;
 }
 
-
-#logo div a > span:first-child{
-  padding-left: 1rem;
-  padding-right: 0.2rem;
+.frame{
+  width: 100%;
+  height: 400px;
+}
+.frame iframe{
+  width: 100%;
+  height: 100%;
 }
 
-.menu:first-child{
-  margin-right: 2rem;
+.details{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.poster{
+  margin-right: 1rem;
+  width: 20%;
+  height: auto;
+}
+.poster img{
+  width: 100%;
+  height: auto;
+  transition: all 1s ease-in-out;
+}
+.poster img:hover{
+  transform: scale(1.5);
+}
+.info{
+  width: 75%;
+  color: rgb(211, 211, 211);
+  font-family: 'Nanum Myeongjo', serif;
+}
+.info h1 {
+  font-size: 1.5rem;
 }
 
+.info h2 {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.info span{
+  font-size: 0.9rem;
+}
+.info span:first-child{
+  margin-left: 0.3rem;
+}
+
+.info p{
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+.info span:hover{
+  color: darkorange;
+}
 /*
-==================
-Content
-==================
+  Font to use : 
+    font-family: 'Nanum Myeongjo', serif; 
+    font-family: "helvetica neue", sans-serif;
+    font-family: 'Bitter', serif;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Arvo', serif;
 */
 
-.movie-list {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+.movie-desc{
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-.movie-list .res {
-  margin-bottom: 2rem
+footer{
+  margin: 0 auto;
+  border-top: 1px solid rgb(24, 29, 34);
+  background-color: rgb(230, 230, 230);
 }
 
-.img{
-  width: 50%;
+footer div{
+  display: flex;
+  justify-content: space-between;
 }
 
-.desc{
-  margin-left: 0.5rem;
-}
-.column{
-  margin: 2px;
+footer p{
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Nanum Myeongjo', serif;
+  color: rgb(1, 19, 37);
+  font-size: 0.9rem;
+  font-weight: 600;
 }

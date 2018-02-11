@@ -34,17 +34,13 @@ export default class SearchMovie extends React.Component{
     //render the component
     render(){
         return(
-            <form className="level field has-addons" onSubmit={this.submitSearch}>
-              <div className="control">
+            <form className="display-inline" onSubmit={this.submitSearch}>
+              <div className="input">
                 <input
-                  className="input"
                   onChange={this.handleSearch}
                   type="text"
                   placeholder="Movie Name..."
                   value={this.state.movieName}/>
-              </div>
-              <div className="control">
-                <button className="button is-info">Search</button>
               </div>
             </form>
         );
