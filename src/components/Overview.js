@@ -109,7 +109,7 @@ export default class Overview extends Component {
     
     return (
       <div className="overview">
-        <div>
+        <div className="btn">
           <button onClick={this.openModal}>More..</button>
         </div>
         <Modal
@@ -126,7 +126,8 @@ export default class Overview extends Component {
           <div className="modal">
             <div className="frame">
               <iframe src={encodeURI(YTB_URL) + this.state.movieVideoId + "?controls=1"} frameBorder="0" allowFullScreen={"true"} title={this.state.movieVideoId}></iframe>
-            </div>  
+            </div>
+            <hr/>  
             <div className="details">
               <div className="poster">
                 <img src={encodeURI(POSTER_URL) + movie.poster_path} alt={movie.title}/>
@@ -134,8 +135,9 @@ export default class Overview extends Component {
               <div className="info">
                 <h1>{movie.title}</h1>
                 <h2>{movie.release_date}</h2>
-                <p>TMBd Rating: <span>{movie.vote_average}/10</span></p>
-                <p>Cast: {characters}</p> 
+                <p>TMBD Rating: <span>{movie.vote_average}/10</span></p>
+                <p>Cast: {characters}</p>
+                <hr/>
                 <p className="movie-desc">{movie.overview}</p>
               </div>
             </div>

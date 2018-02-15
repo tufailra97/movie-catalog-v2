@@ -20,6 +20,9 @@ class DisplayList extends React.Component {
                           <div className="image">
                             <img src={encodeURI(url)+movie.poster_path} alt={movie.title}/>
                           </div>
+                          <div className="m-rate">
+                            <span className="fa fa-star"></span><span>{movie.vote_average}</span>
+                          </div>
                           <div className="desc">
                             <p>{movie.title}</p>
                             <Overview overview={movie}/>

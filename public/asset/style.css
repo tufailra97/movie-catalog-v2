@@ -115,15 +115,15 @@ hr{
   border: 0.5px solid lightgray;
 }
 .item{
-  max-width: 18%;
-  height: auto;
+  position: relative;
+  width: 18%;
+  height: 400px;
   margin: 1rem 0.5rem;
   overflow: hidden;
-  box-shadow: 5px 2px 5px rgb(24, 23, 23);
 }
 .image{
   width: 100%;
-  height: 85%;
+  height: 100%;
   overflow: hidden;
 }
 .image img{
@@ -135,15 +135,36 @@ hr{
 .image img:hover{
   transform: scale(1.3);
 }
+.m-rate{
+  min-width: 15%;
+  position: absolute;
+  padding: 0.2rem 0.2rem;
+  color: rgb(30, 29, 70);
+  font-family: 'Cabin', sans-serif;
+  background-color: rgb(255, 217, 0);
+  text-align: center;
+  font-size: 1rem;
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+.m-rate span:last-child{
+  margin-left: 0.3rem;
+}
+.fa-star{
+  margin: 0;
+  padding: 0;
+}
 .desc{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(24, 29, 34);
+  position: absolute;
+  width: 100%;
+  padding: 0.2rem 0.2rem;
+  bottom: 0;
+  margin: 0;
+  background-color: rgba(24, 29, 34, 0.801)
 }
 .desc p{
-  margin: 0.2rem 0;
-  width: 90%;
+  width: 100%;
   font-size: 1rem;
   font-family: 'Nanum Myeongjo', serif; 
   text-align: center;
@@ -157,11 +178,13 @@ hr{
 /*
   Overview
 */
+.btn{
+  text-align: center;
+}
 .overview button{
-  margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
   color: white;
-  background-color: rgb(24, 29, 34);
+  background-color: rgba(24, 29, 34, 0.6);
   border: 1px solid white;
   border-radius: 25px;
   transition: all 1s ease;
@@ -216,6 +239,13 @@ hr{
   display: flex;
   justify-content: space-between;
 }
+.modal hr{
+  margin: 1rem 0;
+  width: 100%;
+  height: 0.9px;
+  background-color: #222121bb;
+  border: none;
+}
 .poster{
   margin-right: 1rem;
   width: 20%;
@@ -224,10 +254,6 @@ hr{
 .poster img{
   width: 100%;
   height: auto;
-  transition: all 1s ease-in-out;
-}
-.poster img:hover{
-  transform: scale(1.5);
 }
 .info{
   width: 75%;
@@ -253,10 +279,14 @@ hr{
 .info p{
   font-size: 1.2rem;
   margin: 0.5rem 0;
+  font-family: 'Cabin', sans-serif;
+
 }
 .info span:hover{
   color: darkorange;
 }
+
+
 /*
   Font to use : 
     font-family: 'Nanum Myeongjo', serif; 
@@ -290,3 +320,41 @@ footer p{
   font-size: 0.9rem;
   font-weight: 600;
 }
+
+@media only screen and (max-width: 1500px) {
+  .item{
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .display-list{
+    width: 100%;
+  }
+  .item{
+    height: 250px;
+    width: 28%;
+    height: auto;
+  }
+  .border{
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid lightgoldenrodyellow;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+  .display-inline{
+    display: block;
+  }
+  .display-list{
+    width: 100%;
+  }
+  .item{
+    width: 25%;
+    height: auto;
+  }
+}
+
+
