@@ -160,6 +160,7 @@ const customStyles = {
     bottom : 'auto',
     marginRight : '-50%',
     transform : 'translate(-50%, -50%)',
+    padding: '0',
     backgroundColor: 'rgba(24, 29, 34, 0.8)',
     border: 'none',
     overflowY: 'auto'

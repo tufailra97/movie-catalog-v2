@@ -25,10 +25,7 @@ export default class Header extends Component {
       //HEADER
       <header id="header">
         <nav className="display-inline">
-          <div id="logo" className="display-inline">
-              <a className="d-inline-block align-top" href="#">
-                <img src="asset/img/logo.svg" alt="movie"/>
-              </a>
+          <div id="logo">
               <a href="">
                 <h1 className="title">MovieLots</h1>
               </a>
