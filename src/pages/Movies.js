@@ -12,25 +12,28 @@ class Movies extends Component {
     this.state = {
       movies: [],
       name: '',
-      type : 'Top Movie'
+      type : 'Top Movie',
+      page: null,
+      totalPages: null,
+      totalRes: null
     }
   }
 
-
   componentDidMount(){
     this.fetchMovie();
+    console.log(this.state.totalPages);
   }
   //fetching movie
-  fetchMovie = (name) =>{
-    const API = '&api_key=72049b7019c79f226fad8eec6e1ee889';
+  fetchMovie = () =>{
+    const API = '72049b7019c79f226fad8eec6e1ee889';
     let movieAPI = '';
 
     //if the length of the movies is equal to zero fetch default search
-    if( this.state.movies.length === 0 ){
-      movieAPI = "https://api.themoviedb.org/3/discover/movie?api_key=72049b7019c79f226fad8eec6e1ee889&sort_by=popularity.desc&page=1";
+    if( this.state.name === '' ){
+      movieAPI = "https://api.themoviedb.org/3/discover/movie?api_key="+API+"&sort_by=popularity.desc&page="+ this.state.page;
     }else{
       //search the movie name
-      movieAPI = "https://api.themoviedb.org/3/search/movie?page=1&query=" + name + API;
+      movieAPI = "https://api.themoviedb.org/3/search/movie?page="+this.state.page+"&query=" + this.state.name + "&api_key="+API;
     }
 
 
@@ -45,7 +48,10 @@ class Movies extends Component {
       //if data fetched result is greater than 0
       if(data.results.length > 0){
         this.setState({
-          movies: data.results
+          movies: data.results,
+          totalPages: data.total_pages,
+          totalRes: data.total_results,
+          page: 1
         });
       }
 
@@ -58,17 +64,31 @@ class Movies extends Component {
   //handle name
   handleResult = (name) =>{
     this.setState({
-      name: name
+      name: name,
+      type: 'Results for: ' + name
+    },()=>{
+      this.fetchMovie();
     });
-    this.fetchMovie(name);
   }
-
+  //handle page number
+  handlePage = (page) =>{
+    let value = page;
+    this.setState({
+      page : value
+    }, () => {
+      this.fetchMovie()
+    });
+  }
   //render the component
   render() {
     return (
       <div className="main">
         <Header name = {this.handleResult}/>
-        <DisplayList movies={this.state.movies} res={this.state.type}/>
+        <DisplayList 
+          movies={this.state.movies} 
+          res={this.state.type}
+          details={this.state}
+          pageNumber={this.handlePage}/>
         <Footer />
       </div>
     );
