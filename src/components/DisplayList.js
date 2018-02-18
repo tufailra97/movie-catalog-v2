@@ -48,6 +48,8 @@ class DisplayList extends React.Component {
               </div>
               <div>
                 <Pagination
+                  firstPageText='first'
+                  lastPageText='last'
                   activePage={this.state.activePage}
                   itemsCountPerPage={20}
                   totalItemsCount={this.props.details.totalRes}
