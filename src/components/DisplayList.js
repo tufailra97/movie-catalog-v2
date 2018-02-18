@@ -13,6 +13,10 @@ class DisplayList extends React.Component {
     handlePageChange = (pageNumber)=> {
       this.setState({
           activePage: pageNumber
+        }, ()=>{
+          this.setState({
+            activePage: pageNumber
+          })
         });
       this.props.pageNumber(this.state.activePage);
     }
@@ -46,6 +50,7 @@ class DisplayList extends React.Component {
                   })
                 }
               </div>
+              
               <div>
                 <Pagination
                   firstPageText='first'

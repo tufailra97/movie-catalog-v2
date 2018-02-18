@@ -29,7 +29,14 @@
 
 html, body {
   width: 100%;
-  height: 100%
+  height: 100%;
+  background-color: rgba(37, 41, 46, 0.801);
+  background-image: url('img/bg.jpg'); 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .display-inline{
@@ -49,9 +56,9 @@ Header
 */
 #header{
   padding: 0.5rem 1rem;
-  background-color: rgb(24, 29, 34);
+  background-color: rgba(24, 29, 34, 0.747);
 }
-#header .title{
+.title{
   margin-left: 1rem;
   font-size: 1.8rem;
   font-family: 'Cabin', sans-serif;
@@ -108,7 +115,6 @@ Content
   margin: 0 auto;
   padding: 1rem 0 1rem 0;
   width: 100%;
-  background-color: rgb(238, 238, 238);
   height: auto;
 }
 .rest h1 {
@@ -134,7 +140,7 @@ hr{
   width: 18%;
   height: auto;
   margin: 1rem 0.5rem;
-  box-shadow: 3px 3px 3px rgba(57, 47, 59, 0.89);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.89);
   overflow: hidden;
 }
 .image{
@@ -319,7 +325,7 @@ hr{
   width: inherit;
   margin: 1rem 0.1rem;
   padding: 0.3rem 0.5rem;
-  border: 1px solid rgb(24, 29, 34);;
+  border: 1px solid rgb(221, 222, 223);;
 }
 .pagination li:first-child{
   border-top-left-radius: 5px;
@@ -334,21 +340,21 @@ hr{
   background-color: rgb(24, 29, 34);;
 }
 .pagination li a{
-  color: rgb(24, 29, 34);;
+  color: rgb(255, 255, 255);;
 }
 
 .pagination li:hover a{
   color: white;
 }
 .pagination .active{
-  background-color: rgb(24, 29, 34);;
+  background-color: rgb(255, 255, 255);;
 }
 .pagination .active a{
-  color: white;
+  color: rgb(2, 1, 1);
 }
 footer{
   margin: 0 auto;
-  background-color: rgb(24, 29, 34);;
+  background-color: rgba(24, 29, 34, 0.473);
 }
 
 footer div{
