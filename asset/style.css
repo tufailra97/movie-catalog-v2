@@ -301,21 +301,43 @@ hr{
   color: darkorange;
 }
 
-
-/*
-  Font to use : 
-    font-family: 'Nanum Myeongjo', serif; 
-    font-family: "helvetica neue", sans-serif;
-    font-family: 'Bitter', serif;
-    font-family: 'Cabin', sans-serif;
-    font-family: 'Arvo', serif;
-*/
-
 .movie-desc{
-  font-size: 1rem;
+  font-size: 0.7rem;
   line-height: 1.5rem;
 }
 
+.pagination{
+  margin-bottom: 1rem;
+  display: flex;
+  widows: 100%;
+  justify-content: center;
+}
+.pagination li{
+  list-style: none;
+  width: inherit;
+}
+.pagination li{
+  margin: 1rem 0.2rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid grey;
+}
+
+.pagination li:hover{
+  background-color: rgb(52, 47, 73);
+}
+.pagination li a{
+  color: rgb(0, 0, 0);
+}
+
+.pagination li:hover a{
+  color: white;
+}
+.pagination .active{
+  background-color: rgb(7, 3, 3);
+}
+.pagination .active a{
+  color: white;
+}
 footer{
   margin: 0 auto;
   border-top: 1px solid rgb(24, 29, 34);
@@ -360,14 +382,11 @@ footer p{
     width: 100%;
   }
   .toggle{
-    display: inline-block;
-    transition: height 1s ease;
-   
+    display: inline-block;   
   }
   .toggle-item{
     width: 100%;
-    padding-top: 1rem;
-    
+    padding-top: 1rem;    
   }
   .active{
     display: block;
