@@ -74,13 +74,28 @@ Header
   color: white;
 }
 #header li a:hover{
-  border: 1px solid rgb(255, 255, 255);
+  color: darkgoldenrod;
 }
 
 #header .input input[type=text]{
   padding: 0.8rem;
   border-radius: 25px;
   border: none;
+}
+
+.res-menu{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle{
+  color: white;
+  font-size: 1.5rem;
+  display: none;
+}
+.toggle:hover{
+  color: orange;
 }
 
 
@@ -117,8 +132,9 @@ hr{
 .item{
   position: relative;
   width: 18%;
-  height: 400px;
+  height: auto;
   margin: 1rem 0.5rem;
+  box-shadow: 3px 3px 3px rgba(57, 47, 59, 0.89);
   overflow: hidden;
 }
 .image{
@@ -146,7 +162,6 @@ hr{
   font-size: 1rem;
   top: 0;
   right: 0;
-  margin: 0;
 }
 .m-rate span:last-child{
   margin-left: 0.3rem;
@@ -173,6 +188,7 @@ hr{
   white-space: nowrap;
   color: white;
 }
+
 
 
 /*
@@ -303,7 +319,7 @@ hr{
 footer{
   margin: 0 auto;
   border-top: 1px solid rgb(24, 29, 34);
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(7, 3, 3);
 }
 
 footer div{
@@ -315,24 +331,18 @@ footer p{
   padding: 1rem;
   text-align: center;
   font-family: 'Nanum Myeongjo', serif;
-  color: rgb(1, 19, 37);
+  color: rgb(240, 240, 240);
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-@media only screen and (max-width: 1500px) {
-  .item{
-    height: 300px;
-  }
-}
 
 @media only screen and (max-width: 1200px) {
   .display-list{
     width: 100%;
   }
   .item{
-    height: 250px;
-    width: 25%;
+    width: 20%;
     height: auto;
   }
   .border{
@@ -346,17 +356,53 @@ footer p{
   .display-inline{
     display: block;
   }
+  .res-menu{
+    width: 100%;
+  }
+  .toggle{
+    display: inline-block;
+    transition: height 1s ease;
+   
+  }
+  .toggle-item{
+    width: 100%;
+    padding-top: 1rem;
+    
+  }
+  .active{
+    display: block;
+  }
+  .disable{
+    display: none;
+  }
+  #header li {  
+    margin-left: 0;
+    border-top: 1px solid white;
+    padding: 0.8rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  #header li:hover{
+    background-color: rgba(13, 14, 15, 0.904)
+  }
   .display-list{
     width: 100%;
   }
   .item{
-    width: 25%;
+    width: 30%;
     height: auto;
+  }
+  .input input{
+    width: 90%;
   }
 }
 
 
 @media only screen and (max-width: 640px) {
+  .item{
+    width: 45%;
+    height: auto;
+  }
   .frame{
     width: 100%;
     height: 350px;
