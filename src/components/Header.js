@@ -7,7 +7,8 @@ export default class Header extends Component {
     super();
 
     this.state = {
-      movieName: ''
+      movieName: '',
+      menuStatus: 'toggle-item disable'
     }
   }
   //handle movie name
@@ -16,8 +17,21 @@ export default class Header extends Component {
     this.props.name(name);
     //set movie name
     this.setState({
-      movieName
+      movieName,
     });
+  }
+
+  //handle menu
+  handleMenu = () =>{
+    if(this.state.menuStatus == 'toggle-item disable'){
+      this.setState({
+        menuStatus: 'toggle-item active'
+      });
+    }else{
+      this.setState({
+        menuStatus: 'toggle-item disable'
+      });
+    }
   }
   //render HEADER
   render(){
@@ -25,23 +39,24 @@ export default class Header extends Component {
       //HEADER
       <header id="header">
         <nav className="display-inline">
-          <div id="logo">
-              <a href="">
-                <h1 className="title">MovieLots</h1>
-              </a>
+          <div className="res-menu">
+            <div id="logo">
+                <a href="">
+                  <h1 className="title">MovieLots</h1>
+                </a>
+            </div>
+            <div className="toggle">
+              <span className="fa fa-bars" onClick={this.handleMenu}></span>
+            </div>
           </div>
-          <div>
-            <ul className="display-inline">
-              <li><a href="#">Movie</a></li>
-              <li><a href="#">Series</a></li>
-            </ul>
-          </div>
-          <div className="search-bar">
-                <SearchMovie searchName={this.handleMovieName}/>
+          <div className={this.state.menuStatus}>
+              <ul className="display-inline">
+                <li><a href="#">Movie</a></li>
+                <li><a href="#">Series</a></li>
+                <li><SearchMovie searchName={this.handleMovieName}/></li>
+              </ul>
           </div>
         </nav>
-        
-        <span className="toggle"></span>
       </header>
     );
   }
