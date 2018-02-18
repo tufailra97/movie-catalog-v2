@@ -325,7 +325,11 @@ hr{
 .pagination li:hover{
   background-color: rgb(52, 47, 73);
 }
-.pagination li a:hover{
+.pagination li a{
+  color: rgb(0, 0, 0);
+}
+
+.pagination li:hover a{
   color: white;
 }
 .pagination .active{
