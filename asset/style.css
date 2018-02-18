@@ -312,36 +312,43 @@ hr{
   widows: 100%;
   justify-content: center;
 }
+
+
 .pagination li{
   list-style: none;
   width: inherit;
-}
-.pagination li{
   margin: 1rem 0.2rem;
   padding: 0.3rem 0.5rem;
-  border: 1px solid grey;
+  border: 1px solid rgb(24, 29, 34);;
+}
+.pagination li:first-child{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.pagination li:last-child{
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .pagination li:hover{
-  background-color: rgb(52, 47, 73);
+  background-color: rgb(24, 29, 34);;
 }
 .pagination li a{
-  color: rgb(0, 0, 0);
+  color: rgb(24, 29, 34);;
 }
 
 .pagination li:hover a{
   color: white;
 }
 .pagination .active{
-  background-color: rgb(7, 3, 3);
+  background-color: rgb(24, 29, 34);;
 }
 .pagination .active a{
   color: white;
 }
 footer{
   margin: 0 auto;
-  border-top: 1px solid rgb(24, 29, 34);
-  background-color: rgb(7, 3, 3);
+  background-color: rgb(24, 29, 34);;
 }
 
 footer div{
