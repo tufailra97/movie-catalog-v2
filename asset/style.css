@@ -257,7 +257,7 @@ hr{
 .modal hr{
   margin: 1rem 0;
   width: 100%;
-  height: 0.9px;
+  height: 1px;
   background-color: #222121bb;
   border: none;
 }
@@ -317,7 +317,7 @@ hr{
 .pagination li{
   list-style: none;
   width: inherit;
-  margin: 1rem 0.2rem;
+  margin: 1rem 0.1rem;
   padding: 0.3rem 0.5rem;
   border: 1px solid rgb(24, 29, 34);;
 }
